@@ -1,3 +1,7 @@
+
+# ExtremePiano
+Assignment project for Digital Multimedia course. A small piano app made in React.
+=======
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
