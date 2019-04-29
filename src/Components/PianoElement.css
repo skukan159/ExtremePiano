@@ -16,13 +16,13 @@
   margin-top: 10px;
   align-self: center;
   align-items: center;
-  background: grey;
+  background: rgb(168, 168, 168);
 }
 
 .NoteC, .NoteD, .NoteE,.NoteF,.NoteG,.NoteA,.NoteB,.NoteCHigher{
   width: 55px;
   height: 150px;
-  background: grey;
+  background: rgb(168, 168, 168);
   border-width: 10px;
   border: 10px;
   border-color: white;
@@ -35,7 +35,7 @@
   top: -25px;
   width: 40px;
   height: 100px;
-  background: black;
+  background: rgb(51, 51, 51);
   z-index: 2;
   border-width: 10px;
   border: 10px;

@@ -48,7 +48,7 @@ class PianoElement extends Component {
   updatePianoKeysList(event= "undefined",wasPressed = true){
     return [
       <div className="NoteC">
-      <PianoKeyElement className="NoteC" key="0" value="C" pressedKey={event.key} wasPressed={wasPressed} handledKey="s" noteAudio={notec} ></PianoKeyElement>
+      <PianoKeyElement key="0" value="C" pressedKey={event.key} wasPressed={wasPressed} handledKey="s" noteAudio={notec} ></PianoKeyElement>
       </div>,
       <div className="NoteCSharp">
       <PianoKeyElement key="1" value="C#" pressedKey={event.key} handledKey="e" wasPressed={wasPressed} noteAudio={notecsharp}></PianoKeyElement>

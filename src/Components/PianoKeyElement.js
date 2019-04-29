@@ -22,7 +22,7 @@ class PianoKeyElement extends Component {
   }
 
 checkForPressed(){
-  if(this.props.pressedKey && this.props.pressedKey === this.props.handledKey && this.props.wasPressed == true){
+  if(this.props.pressedKey && this.props.pressedKey === this.props.handledKey && this.props.wasPressed === true){
     return this.playSong();
   }
 }
@@ -52,7 +52,7 @@ checkForKeyReleased(){
 }
 
 returnRandomMessage(){
-  let generatedInt = this.randomIntFromInterval(0,14);
+  let generatedInt = this.randomIntFromInterval(0,13);
   let returnedMessage = "Ow";
   switch(generatedInt){
     case 0:
@@ -97,9 +97,8 @@ returnRandomMessage(){
     case 13:
     returnedMessage =  'I am "touched", haha get it? No? Ok. ';
     break;
-    case 14:
-    returnedMessage =  "DO Not Touch - the worst thing you can read in Braille";
-    break;
+    default: break;
+
   }
 
   return <p className="RandomMessage">{returnedMessage}</p>
