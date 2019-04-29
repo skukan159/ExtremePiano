@@ -1,0 +1,46 @@
+/*.AppTitle {
+  margin: 40px;
+  border: 5px dotted pink;
+}*/
+
+.PianoTitle {
+  font-size: 15px;
+  text-align: center;
+}
+
+.PianoKeys {
+  display: flex;
+  justify-content: space-between;
+  width: 650px;
+  height: 150px;
+  margin-top: 10px;
+  align-self: center;
+  align-items: center;
+  background: grey;
+}
+
+.NoteC, .NoteD, .NoteE,.NoteF,.NoteG,.NoteA,.NoteB,.NoteCHigher{
+  width: 55px;
+  height: 150px;
+  background: grey;
+  border-width: 10px;
+  border: 10px;
+  border-color: white;
+  border: solid #000;
+  border-width: 0 1px;
+  z-index: 1;
+}
+.NoteCSharp,.NoteEFlat,.NoteFSharp,.NoteGSharp,.NoteBFlat{
+  position: relative;
+  top: -25px;
+  width: 40px;
+  height: 100px;
+  background: black;
+  z-index: 2;
+  border-width: 10px;
+  border: 10px;
+  border-color: white;
+
+
+}
+

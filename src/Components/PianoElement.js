@@ -1,25 +1,41 @@
 import React, { Component } from 'react';
+import './PianoElement.css';
 import PianoKeyElement from './PianoKeyElement';
+
+import notea from '../Audio/NewPianoNotes/a.wav';
+import noteb from '../Audio/NewPianoNotes/b.wav';
+import notebflat from '../Audio/NewPianoNotes/bflat.wav';
+import notecsharp from '../Audio/NewPianoNotes/csharp.wav';
+
+import notec from '../Audio/NewPianoNotes/c.wav';
+import noted from '../Audio/NewPianoNotes/d.wav';
+import notee from '../Audio/NewPianoNotes/e.wav';
+
+import noteeflat from '../Audio/NewPianoNotes/eflat.wav';
+import notefsharp from '../Audio/NewPianoNotes/fsharp.wav';
+import notef from '../Audio/NewPianoNotes/f.wav';
+import notegsharp from '../Audio/NewPianoNotes/gsharp.wav';
+import noteg from '../Audio/NewPianoNotes/g.wav';
+
+import notechigher from '../Audio/NewPianoNotes/chigher.wav';
 
 class PianoElement extends Component {
     constructor(props){
         super(props);
-
-        
-        document.onkeypress = e => this.notifyPianoKeys(e);
+        document.onkeydown = e => this.notifyPianoKeys(e);
+        document.onkeyup = e => this.buttonReleased(e);
         console.log(this.pianoKeysList);
+        this.buttonPressed = false;
         this.state = {
-          pianoKeysList: this.returnPianoKeysList()
+          pianoKeysList: this.updatePianoKeysList()
         };
-
-        
       }
 
   render() {
     return(
       <div >
-        <h1>I am a piano</h1>
-        <div className = "pianokeys">
+        <h1 className="PianoTitle">I am a piano</h1>
+        <div className = "PianoKeys">
           {this.state.pianoKeysList.map((pianoKey) => pianoKey)}
         </div>
       </div>
@@ -29,42 +45,70 @@ class PianoElement extends Component {
 
 
 
-  returnPianoKeysList(){
-    return [<PianoKeyElement value="c"
-    songsrc="../Audio/PianoNotes/68437__pinkyfinger__piano-a.wav" handledKey="d" >
-    </PianoKeyElement>,
-     <PianoKeyElement key="1" pressedKey="p" value="d" handledKey="w"></PianoKeyElement>,
-    <PianoKeyElement key="2" pressedKey="p" value="e" handledKey="e"></PianoKeyElement>,
-    <PianoKeyElement key="3" pressedKey="p" value="f" handledKey="r"></PianoKeyElement>,
-    <PianoKeyElement key="4" pressedKey="p" value="g" handledKey="t"></PianoKeyElement>,
-    <PianoKeyElement key="5" pressedKey="p" value="a" handledKey="a"></PianoKeyElement>,
-    <PianoKeyElement key="6" pressedKey="p" value="b" handledKey="s"></PianoKeyElement>
+  updatePianoKeysList(event= "undefined",wasPressed = true){
+    return [
+      <div className="NoteC">
+      <PianoKeyElement className="NoteC" key="0" value="C" pressedKey={event.key} wasPressed={wasPressed} handledKey="s" noteAudio={notec} ></PianoKeyElement>
+      </div>,
+      <div className="NoteCSharp">
+      <PianoKeyElement key="1" value="C#" pressedKey={event.key} handledKey="e" wasPressed={wasPressed} noteAudio={notecsharp}></PianoKeyElement>
+      </div>,
+      <div className="NoteD">
+      <PianoKeyElement key="2" value="D" pressedKey={event.key} handledKey="d" wasPressed={wasPressed} noteAudio={noted}></PianoKeyElement>
+      </div>,
+      <div className="NoteEFlat">
+      <PianoKeyElement key="3" value="Eb" pressedKey={event.key} handledKey="r" wasPressed={wasPressed} noteAudio={noteeflat} ></PianoKeyElement>
+      </div>,
+      <div className="NoteE">
+      <PianoKeyElement key="4" value="E" pressedKey={event.key} handledKey="f" wasPressed={wasPressed} noteAudio={notee}></PianoKeyElement>
+      </div>,
+      <div className="NoteF">
+     <PianoKeyElement key="5" value="F" pressedKey={event.key} handledKey="g" wasPressed={wasPressed} noteAudio={notef}> </PianoKeyElement>
+     </div>,
+     <div className="NoteFSharp">
+     <PianoKeyElement key="6" value="F#" pressedKey={event.key} handledKey="y" wasPressed={wasPressed} noteAudio={notefsharp}> </PianoKeyElement>
+     </div>,
+     <div className="NoteG">
+     <PianoKeyElement key="7" value="G" pressedKey={event.key} handledKey="h" wasPressed={wasPressed} noteAudio={noteg}> </PianoKeyElement>
+     </div>,
+     <div className="NoteGSharp">
+     <PianoKeyElement key="8" value="G#" pressedKey={event.key} handledKey="u" wasPressed={wasPressed} noteAudio={notegsharp}> </PianoKeyElement>
+     </div>,
+     <div className="NoteA">
+     <PianoKeyElement key="9" value="A" pressedKey={event.key} handledKey="j" wasPressed={wasPressed} noteAudio={notea}> </PianoKeyElement>
+     </div>,
+     <div className="NoteBFlat">
+     <PianoKeyElement key="10" value="Bb" pressedKey={event.key} handledKey="i" wasPressed={wasPressed} noteAudio={notebflat}> </PianoKeyElement>
+     </div>,
+     <div className="NoteB">
+     <PianoKeyElement key="11" value="B" pressedKey={event.key} handledKey="k" wasPressed={wasPressed} noteAudio={noteb}> </PianoKeyElement>
+     </div>,
+     <div className="NoteCHigher">
+     <PianoKeyElement key="12" value="C" pressedKey={event.key} handledKey="l" wasPressed={wasPressed} noteAudio={notechigher}> </PianoKeyElement>
+     </div>
     ];
   }
 
-  updatePianoKeysList(event){
-    return [<PianoKeyElement
-    pressedKey={event.key}
-    value="c"
-    songsrc="../Audio/PianoNotes/68437__pinkyfinger__piano-a.wav"
-    handledKey="d">
-    </PianoKeyElement>,
-     <PianoKeyElement key="1" pressedKey={event.key} value="d" handledKey="w"></PianoKeyElement>,
-    <PianoKeyElement key="2" pressedKey={event.key}  value="e" handledKey="e"></PianoKeyElement>,
-    <PianoKeyElement key="3" pressedKey={event.key}  value="f" handledKey="r"></PianoKeyElement>,
-    <PianoKeyElement key="4" pressedKey={event.key}  value="g" handledKey="t"></PianoKeyElement>,
-    <PianoKeyElement key="5" pressedKey={event.key}  value="a" handledKey="a"></PianoKeyElement>,
-    <PianoKeyElement key="6" pressedKey={event.key}  value="b" handledKey="s"></PianoKeyElement>,
-    <PianoKeyElement key="7" pressedKey={event.key}  value="c" handledKey="d"></PianoKeyElement>];
-  }
-
   notifyPianoKeys(event){
+  
     console.log("Sending notify piano keys");
     //this.pianoKeysList = this.updatePianoKeysList(keyPressed);
-    this.setState({pianoKeysList : this.updatePianoKeysList(event)});
+    //if(this.buttonPressed === false){
+      this.buttonPressed = true;
+      this.setState({pianoKeysList : this.updatePianoKeysList(event)});
+    //}
+
   }
   
+  buttonReleased(event){
+    console.log("Button released");
+    this.buttonPressed = false;
+    this.setState({pianoKeysList : this.updatePianoKeysList(event,false)});
+  }
 
 }
 
 export default PianoElement;
+//3573 3573 3 7 10     3 7 10
+//D E FS D D E FS D D FS A D FS A
+// C D C Bb 

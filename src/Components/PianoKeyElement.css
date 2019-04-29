@@ -1,0 +1,10 @@
+.IsBeingPlayed{
+  position: relative;
+  width: 55px;
+  height: 150px;
+  background: white;
+}
+
+.RandomMessage{
+  font-size: 1px;
+}
