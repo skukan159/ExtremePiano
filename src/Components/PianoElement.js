@@ -47,43 +47,43 @@ class PianoElement extends Component {
 
   updatePianoKeysList(event= "undefined",wasPressed = true){
     return [
-      <div className="NoteC">
-      <PianoKeyElement key="0" value="C" pressedKey={event.key} wasPressed={wasPressed} handledKey="s" noteAudio={notec} ></PianoKeyElement>
+      <div key="0" className="NoteC">
+      <PianoKeyElement  value="C" pressedKey={event.key} wasPressed={wasPressed} handledKey="s" noteAudio={notec} ></PianoKeyElement>
       </div>,
-      <div className="NoteCSharp">
+      <div key="1" className="NoteCSharp">
       <PianoKeyElement key="1" value="C#" pressedKey={event.key} handledKey="e" wasPressed={wasPressed} noteAudio={notecsharp}></PianoKeyElement>
       </div>,
-      <div className="NoteD">
+      <div key="2" className="NoteD">
       <PianoKeyElement key="2" value="D" pressedKey={event.key} handledKey="d" wasPressed={wasPressed} noteAudio={noted}></PianoKeyElement>
       </div>,
-      <div className="NoteEFlat">
+      <div key="3" className="NoteEFlat">
       <PianoKeyElement key="3" value="Eb" pressedKey={event.key} handledKey="r" wasPressed={wasPressed} noteAudio={noteeflat} ></PianoKeyElement>
       </div>,
-      <div className="NoteE">
+      <div key="4" className="NoteE">
       <PianoKeyElement key="4" value="E" pressedKey={event.key} handledKey="f" wasPressed={wasPressed} noteAudio={notee}></PianoKeyElement>
       </div>,
-      <div className="NoteF">
+      <div key="5" className="NoteF">
      <PianoKeyElement key="5" value="F" pressedKey={event.key} handledKey="g" wasPressed={wasPressed} noteAudio={notef}> </PianoKeyElement>
      </div>,
-     <div className="NoteFSharp">
+     <div key="6" className="NoteFSharp">
      <PianoKeyElement key="6" value="F#" pressedKey={event.key} handledKey="y" wasPressed={wasPressed} noteAudio={notefsharp}> </PianoKeyElement>
      </div>,
-     <div className="NoteG">
+     <div key="7" className="NoteG">
      <PianoKeyElement key="7" value="G" pressedKey={event.key} handledKey="h" wasPressed={wasPressed} noteAudio={noteg}> </PianoKeyElement>
      </div>,
-     <div className="NoteGSharp">
+     <div key="8" className="NoteGSharp">
      <PianoKeyElement key="8" value="G#" pressedKey={event.key} handledKey="u" wasPressed={wasPressed} noteAudio={notegsharp}> </PianoKeyElement>
      </div>,
-     <div className="NoteA">
+     <div key="9" className="NoteA">
      <PianoKeyElement key="9" value="A" pressedKey={event.key} handledKey="j" wasPressed={wasPressed} noteAudio={notea}> </PianoKeyElement>
      </div>,
-     <div className="NoteBFlat">
+     <div key="10" className="NoteBFlat">
      <PianoKeyElement key="10" value="Bb" pressedKey={event.key} handledKey="i" wasPressed={wasPressed} noteAudio={notebflat}> </PianoKeyElement>
      </div>,
-     <div className="NoteB">
+     <div key="11" className="NoteB">
      <PianoKeyElement key="11" value="B" pressedKey={event.key} handledKey="k" wasPressed={wasPressed} noteAudio={noteb}> </PianoKeyElement>
      </div>,
-     <div className="NoteCHigher">
+     <div key="12" className="NoteCHigher">
      <PianoKeyElement key="12" value="C" pressedKey={event.key} handledKey="l" wasPressed={wasPressed} noteAudio={notechigher}> </PianoKeyElement>
      </div>
     ];

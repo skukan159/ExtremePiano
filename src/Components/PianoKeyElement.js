@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
-
+import dogePic1 from '../img/DogePics/doge_much_wow01.jpg';
+import dogePic2 from '../img/DogePics/doge_much_wow02.jpg';
+import dogePic3 from '../img/DogePics/doge_much_wow03.png';
+import dogePic4 from '../img/DogePics/doge4.jpg';
+import dogePic5 from '../img/DogePics/doge5.jpg';
+import dogePic6 from '../img/DogePics/doge6.jpg';
+import dogePic7 from '../img/DogePics/doge7.jpg';
 
 class PianoKeyElement extends Component {
+  
 
 
 
@@ -52,8 +59,21 @@ checkForKeyReleased(){
 }
 
 returnRandomMessage(){
-  let generatedInt = this.randomIntFromInterval(0,13);
+  let dogestyles = {
+    //margin: '20px',
+    width: '70px',
+    height: '90px',
+    zIndex: '10',
+    position: 'relative',
+    left: '-15px',
+    //backgroundColor: 'yellow',
+  };
+
+  let generatedInt = this.randomIntFromInterval(0,20);
   let returnedMessage = "Ow";
+
+  console.log(generatedInt);
+
   switch(generatedInt){
     case 0:
       returnedMessage =  "Ouch, cut your nails!";
@@ -74,7 +94,7 @@ returnRandomMessage(){
     returnedMessage =  "Gentle please!";
     break;
     case 6:
-    returnedMessage =  "Stop it";
+    returnedMessage =  "Without music, life would B-flat.";
     break;
     case 7:
     returnedMessage =  "No means no!";
@@ -92,10 +112,31 @@ returnRandomMessage(){
     returnedMessage =  "I am calling the police.";
     break;
     case 12:
-    returnedMessage =  "Did you at least wash your hands?";
+    returnedMessage =  "Did you wash your hands?";
     break;
     case 13:
-    returnedMessage =  'I am "touched", haha get it? No? Ok. ';
+    returnedMessage =  'I just jazzed.';
+    break;
+    case 14:
+    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic1}></img>
+    break;
+    case 15:
+    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic2}></img>
+    break;
+    case 16:
+    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic3}></img>
+    break;
+    case 17:
+    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic4}></img>
+    break;
+    case 18:
+    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic5}></img>
+    break;
+    case 19:
+    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic6}></img>
+    break;
+    case 20:
+    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic7}></img>
     break;
     default: break;
 
