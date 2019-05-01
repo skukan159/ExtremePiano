@@ -61,11 +61,11 @@ checkForKeyReleased(){
 returnRandomMessage(){
   let dogestyles = {
     //margin: '20px',
-    width: '70px',
-    height: '90px',
-    zIndex: '10',
+    width: '60px',
+    height: '80px',
+    zIndex: 10,
     position: 'relative',
-    left: '-15px',
+    left: '-5px',
     //backgroundColor: 'yellow',
   };
 
@@ -118,25 +118,25 @@ returnRandomMessage(){
     returnedMessage =  'I just jazzed.';
     break;
     case 14:
-    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic1}></img>
+    returnedMessage = <img alt="Doge" style={dogestyles} src={dogePic1}></img>
     break;
     case 15:
-    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic2}></img>
+    returnedMessage = <img alt="Doge" style={dogestyles} src={dogePic2}></img>
     break;
     case 16:
-    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic3}></img>
+    returnedMessage = <img alt="Doge" style={dogestyles} src={dogePic3}></img>
     break;
     case 17:
-    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic4}></img>
+    returnedMessage = <img alt="Doge" style={dogestyles} src={dogePic4}></img>
     break;
     case 18:
-    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic5}></img>
+    returnedMessage = <img alt="Doge" style={dogestyles} src={dogePic5}></img>
     break;
     case 19:
-    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic6}></img>
+    returnedMessage = <img alt="Doge" style={dogestyles} src={dogePic6}></img>
     break;
     case 20:
-    returnedMessage = <img alt="Doge Image" style={dogestyles} src={dogePic7}></img>
+    returnedMessage = <img alt="Doge" style={dogestyles} src={dogePic7}></img>
     break;
     default: break;
 
